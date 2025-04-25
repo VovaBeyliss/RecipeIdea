@@ -1,0 +1,79 @@
+body {
+    background-color: black;
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    margin-top: -10px;
+    border-bottom: 1px solid white;
+    transition: 0.5s;
+}
+
+.navigation:hover {
+    border-bottom: 1px solid yellow;
+    transition: 0.5s;
+}
+
+.navigation a {
+    color: white;
+    font-size: 150%;
+    font-family: Verdana;
+    transition: 0.5s;
+    user-select: none;
+    position: relative;
+    text-decoration: none;
+}
+
+.navigation a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: yellow;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.5s; 
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation a:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: yellow;
+}
+
+.logo {
+    width: 100px;
+    height: 70px;
+    position: fixed;
+    z-index: 1000;
+    margin-top: -10px;
+}
+
+#h1-5 {
+    color: white;
+    font-size: 200%;
+    margin-left: 25px;
+    margin-top: 100px;
+    position: absolute;
+    user-select: none;
+    transition: 0.5s;
+}
+
+#h1-5:hover {
+    color: yellow;
+    transition: 0.5s;
+}
