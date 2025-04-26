@@ -1,0 +1,168 @@
+body {
+    background-color: black;
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    margin-top: -10px;
+    border-bottom: 1px solid white;
+    transition: 0.5s;
+}
+
+.navigation:hover {
+    border-bottom: 1px solid yellow;
+    transition: 0.5s;
+}
+
+.navigation a {
+    color: white;
+    font-size: 150%;
+    font-family: Verdana;
+    transition: 0.5s;
+    user-select: none;
+    position: relative;
+    text-decoration: none;
+}
+
+.navigation a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: yellow;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.5s; 
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation a:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: yellow;
+}
+
+.logo {
+    width: 100px;
+    height: 70px;
+    position: absolute;
+    position: fixed;
+    z-index: 1000;
+    margin-top: -10px;
+}
+
+#h1-5 {
+    color: white;
+    font-size: 200%;
+    margin-left: 100px;
+    margin-top: 100px;
+    position: absolute;
+    user-select: none;
+    transition: 0.5s;
+}
+
+#h1-5:hover {
+    color: yellow;
+    transition: 0.5s;
+}
+
+.recipes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.recipe {
+    width: 90%;
+    height: 800px;
+    border: 2px solid white;
+    border-radius: 40px;
+    user-select: none;
+    transition: 0.5s;
+    color: white;
+    font-family: Verdana;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 40px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#image {
+    width: 800px;
+    height: 720px;
+    border: 2px solid white;
+    border-radius: 30px;
+    object-fit: cover;
+    margin: 40px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.recipe-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#name {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+    border-bottom: 2px solid yellow;
+    padding-bottom: 15px;
+}
+
+#description {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+#timeCooking {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#timeCooking::before {
+    content: "⏱ Time Cooking: ";
+    margin-right: 10px;
+    color: yellow;
+}
+
+#ingridients {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+#ingridients::before {
+    content: "🍽️ Ingridients: ";
+    color: yellow;
+}
+
+.recipe:hover {
+    border: 2px solid yellow;
+    box-shadow: 0 0 50px yellow;
+    transform: translateY(-5px);
+}
