@@ -1,8 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using RecipeIdea.Models;
 using RecipeIdea.Dtos;
 
 namespace RecipeIdea.Services.Interfaces;
 
-interface IRecipeService {
+public interface IRecipeService {
     Task SaveRecipe(RecipeDto request);
     Task<List<Recipe>> GetAllRecipes();
 }

@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using RecipeIdea.Services.Interfaces;
+using RecipeIdea.Models;
 using RecipeIdea.Data;
 using RecipeIdea.Dtos;
 

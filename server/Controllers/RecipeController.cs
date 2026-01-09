@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using RecipeIdea.Services.Interfaces;
 using RecipeIdea.Services;
 using RecipeIdea.Dtos;
 
@@ -14,7 +15,7 @@ public class RecipeController : ControllerBase {
 
     [HttpPost]
     public async Task<IActionResult> SaveRecipe([FromBody] RecipeDto request) {
-        await _recipeService.SaveRecipe();
+        await _recipeService.SaveRecipe(request);
 
         return Ok(new { succes = true });
     }
