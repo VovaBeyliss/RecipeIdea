@@ -5,6 +5,6 @@ public class Recipe {
     public string Name { get; set; } = null!;
     public string Description { get; set; } = null!;
     public string TimeCooking { get; set; } = null!;
-    public string Ingridients { get; set; } = null!;
-    public string PhotoPath { get; set; } = null!;
+    public string Ingredients { get; set; } = null!;
+    public string Image { get; set; } = null!;
 }

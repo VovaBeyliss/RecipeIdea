@@ -17,7 +17,7 @@ public class RecipeController : ControllerBase {
     public async Task<IActionResult> SaveRecipe([FromBody] RecipeDto request) {
         await _recipeService.SaveRecipe(request);
 
-        return Ok(new { succes = true });
+        return Ok(new { success = true });
     }
 
     [HttpGet]

@@ -4,7 +4,7 @@ using RecipeIdea.Models;
 using RecipeIdea.Data;
 using RecipeIdea.Dtos;
 
-namespace RecipeIdea.Services.Interfaces;
+namespace RecipeIdea.Services;
 
 public class RecipeService : IRecipeService {
     private readonly AppDbContext _db;
@@ -18,8 +18,8 @@ public class RecipeService : IRecipeService {
             Name = request.Name,
             Description = request.Description,
             TimeCooking = request.TimeCooking,
-            Ingridients = request.Ingridients,
-            PhotoPath = "photo.jpg"
+            Ingredients = request.Ingredients,
+            Image = request.Image
         };
 
         _db.Recipes.Add(recipe);
