@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let name = document.getElementById("name");
     let description = document.getElementById("description");
     let time_cooking = document.getElementById("time-cooking");
-    let ingridients = document.getElementById("ingridients");
+    let ingredients = document.getElementById("ingredients");
     let image = document.getElementById("image");
     
-    let arrayRecipe = [name, description, time_cooking, ingridients, image];
+    let arrayRecipe = [name, description, time_cooking, ingredients, image];
 
     document.querySelector(".create-button").addEventListener("click", async () => {
         let all_filled = true;
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (all_filled) {
             try {
-                const response = await fetch('http://localhost:3000/api/recipe', {
+                const response = await fetch('http://localhost:5162/api/recipe', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         name: name.value,
                         description: description.value,
                         timeCooking: time_cooking.value,
-                        ingridients: ingridients.value,
+                        ingredients: ingredients.value,
                         image: image.value
                     })
                 });
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 
                 if (data.success) {
-                    location.assign("file:///C:/Users/Admin/RecipeIdea/public/recipes_page/index_recipes.html");
+                    location.href = "index_recipes.html";
                 } else {
                     alert("Помилка при збереженні: " + (data.message || ""));
                 }

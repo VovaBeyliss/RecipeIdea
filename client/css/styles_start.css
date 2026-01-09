@@ -408,6 +408,6 @@ height: 950px;
     .footer-1 {
         width: 100%;
         height: 330px;
-        background: url(images_start/footer.jpg);
+        background: url(images/footer.jpg);
         background-size: cover;
     }

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function fetchAllRecipes() {
         try {
-            let response = await fetch('http://localhost:3000/api/recipe');
+            let response = await fetch('http://localhost:5162/api/recipe');
             if (!response.ok) {
                 throw new Error(`HTTP помилка! Статус: ${response.status}`);
             }

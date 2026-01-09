@@ -22,10 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     button_create.addEventListener("click", () => {
-        location.assign("file:///C:/Users/Admin/RecipeIdea/public/create_page/index_create.html");
+        location.href = "index_create.html";
     })
 
     button_recipes.addEventListener("click", () => {
-        location.assign("file:///C:/Users/Admin/RecipeIdea/public/recipes_page/index_recipes.html");
+        location.href = "index_recipes.html";
     })
 })
