@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     async function fetchAllRecipes() {
         try {
-            let response = await fetch('http://localhost:3000/api/all');
+            let response = await fetch('http://localhost:3000/api/recipe');
             if (!response.ok) {
                 throw new Error(`HTTP помилка! Статус: ${response.status}`);
             }
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let recipeDiv = document.createElement("div");
             recipeDiv.className = "recipe";
             recipeDiv.innerHTML = `
-                <img id="image" src="images_recipes/logo.png">
+                <img id="image" src="${recipe.image}">
                 <div class="recipe-info">
                     <p id="name">${recipe.name}</p>
                     <p id="description">${recipe.description}</p>
