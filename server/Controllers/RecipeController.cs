@@ -22,8 +22,8 @@ public class RecipeController : ControllerBase {
 
     [HttpGet]
     public async Task<IActionResult> ReturnAllRecipes() {
-        var recipes = await _recipeService.GetAllRecipes();
+        var recipesList = await _recipeService.GetAllRecipes();
 
-        return Ok(new { succes = true, recipes = recipes });
+        return Ok(new { success = true, recipes = recipesList });
     }
 }

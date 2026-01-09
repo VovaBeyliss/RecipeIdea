@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     async function displayRecipes() {
-        let recipes = await fetchAllRecipes();
+        let data = await fetchAllRecipes();
+        let recipes = data.recipes;
 
         recipes.forEach(recipe => {
             let recipeDiv = document.createElement("div");
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p id="name">${recipe.name}</p>
                     <p id="description">${recipe.description}</p>
                     <p id="timeCooking">${recipe.timeCooking}</p>
-                    <p id="ingridients">${recipe.ingridients}</p>
+                    <p id="ingridients">${recipe.ingredients}</p>
                 </div>
             `;
             
