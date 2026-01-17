@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\VebSites_Projects\\WithBackend\\NodeJs\\RecipeIdea\\server\\RecipeIdea.csproj": {}
+    "D:\\Programming\\VebSites_Projects\\WithBackend\\C#.ASP.NET.EF.CORE\\RecipeIdea\\server\\RecipeIdea.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\VebSites_Projects\\WithBackend\\NodeJs\\RecipeIdea\\server\\RecipeIdea.csproj": {
+    "D:\\Programming\\VebSites_Projects\\WithBackend\\C#.ASP.NET.EF.CORE\\RecipeIdea\\server\\RecipeIdea.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\VebSites_Projects\\WithBackend\\NodeJs\\RecipeIdea\\server\\RecipeIdea.csproj",
+        "projectUniqueName": "D:\\Programming\\VebSites_Projects\\WithBackend\\C#.ASP.NET.EF.CORE\\RecipeIdea\\server\\RecipeIdea.csproj",
         "projectName": "RecipeIdea",
-        "projectPath": "D:\\Programming\\VebSites_Projects\\WithBackend\\NodeJs\\RecipeIdea\\server\\RecipeIdea.csproj",
+        "projectPath": "D:\\Programming\\VebSites_Projects\\WithBackend\\C#.ASP.NET.EF.CORE\\RecipeIdea\\server\\RecipeIdea.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\VebSites_Projects\\WithBackend\\NodeJs\\RecipeIdea\\server\\obj\\",
+        "outputPath": "D:\\Programming\\VebSites_Projects\\WithBackend\\C#.ASP.NET.EF.CORE\\RecipeIdea\\server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

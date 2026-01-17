@@ -26,9 +26,5 @@ public class RecipeService : IRecipeService {
         await _db.SaveChangesAsync();
     }
 
-    public async Task<List<Recipe>> GetAllRecipes() {
-        var recipes = await _db.Recipes.ToListAsync();
-
-        return recipes;
-    }
+    public async Task<List<Recipe>> GetAllRecipes() => await _db.Recipes.ToListAsync();
 }
