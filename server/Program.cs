@@ -1,5 +1,7 @@
-using Microsoft.EntityFrameworkCore;
+using RecipeIdea.Repositories.Interfaces;
 using RecipeIdea.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using RecipeIdea.Repositories;
 using RecipeIdea.Services;
 using RecipeIdea.Data;
 
@@ -8,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IRecipeService, RecipeService>();
+builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
 
 builder.Services.AddCors(options => 
 {

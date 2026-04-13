@@ -15,14 +15,13 @@ public class RecipeController : ControllerBase {
 
     [HttpPost]
     public async Task<IActionResult> SaveRecipe([FromBody] RecipeDto request) {
-        await _recipeService.SaveRecipe(request);
+        await _recipeService.SaveRecipeAsync(request);
 
         return Ok(new { success = true });
     }
 
     [HttpGet]
     public async Task<IActionResult> ReturnAllRecipes() {
-
-        return Ok(new { success = true, recipes = await _recipeService.GetAllRecipes() });
+        return Ok(new { success = true, recipes = await _recipeService.GetAllRecipesAsync() });
     }
 }

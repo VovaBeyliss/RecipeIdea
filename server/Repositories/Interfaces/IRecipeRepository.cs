@@ -1,10 +1,10 @@
-using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 using RecipeIdea.Models;
 using RecipeIdea.Dtos;
 
-namespace RecipeIdea.Services.Interfaces;
+namespace RecipeIdea.Repositories.Interfaces;
 
-public interface IRecipeService {
+public interface IRecipeRepository {
     Task SaveRecipeAsync(RecipeDto request);
     Task<List<Recipe>> GetAllRecipesAsync();
 }
