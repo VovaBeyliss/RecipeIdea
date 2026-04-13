@@ -1,6 +1,7 @@
 using RecipeIdea.Repositories.Interfaces;
-using Microsoft.EntityFrameworkCore;
 using RecipeIdea.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using RecipeIdea.Extensions;
 using RecipeIdea.Models;
 using RecipeIdea.Data;
 using RecipeIdea.Dtos;
@@ -19,10 +20,6 @@ public class RecipeService : IRecipeService {
     }
 
     public async Task<List<Recipe>> GetAllRecipesAsync() {
-        var recipesList = await _recipeRepository.GetAllRecipesAsync();
-
-        recipesList.Reverse();
-        
-        return recipesList;
+        return await _recipeRepository.GetAllRecipesAsync().ReverseAsync();
     }
 }
