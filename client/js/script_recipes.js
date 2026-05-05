@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
         let data = await fetchAllRecipes();
         let recipes = data.recipes;
 
+        if (recipes.length <= 0) {
+            alert("Now in data base there aren`t any recipes, so create them!)");
+        }
+
         recipes.forEach(recipe => {
             let recipeDiv = document.createElement("div");
             recipeDiv.className = "recipe";
