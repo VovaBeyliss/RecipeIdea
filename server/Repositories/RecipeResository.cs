@@ -1,8 +1,7 @@
-using Microsoft.EntityFrameworkCore;
 using RecipeIdea.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using RecipeIdea.Models;
 using RecipeIdea.Data;
-using RecipeIdea.Dtos;
 
 namespace RecipeIdea.Repositories;
 
@@ -13,16 +12,8 @@ public class RecipeRepository : IRecipeRepository {
         _db = db;
     }
 
-    public async Task SaveRecipeAsync(RecipeDto request) {
-        var recipe = new Recipe {
-            Name = request.Name,
-            Description = request.Description,
-            TimeCooking = request.TimeCooking,
-            Ingredients = request.Ingredients,
-            Image = request.Image
-        };
-
-        _db.Recipes.Add(recipe);
+    public async Task AddRecipeAsync(Recipe recipe) {
+        await _db.Recipes.AddAsync(recipe);
         await _db.SaveChangesAsync();
     }
 

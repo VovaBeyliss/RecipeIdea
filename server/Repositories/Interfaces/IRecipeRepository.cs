@@ -5,6 +5,6 @@ using RecipeIdea.Dtos;
 namespace RecipeIdea.Repositories.Interfaces;
 
 public interface IRecipeRepository {
-    Task SaveRecipeAsync(RecipeDto request);
+    Task AddRecipeAsync(Recipe request);
     Task<List<Recipe>> GetAllRecipesAsync();
 }
